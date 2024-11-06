@@ -36,11 +36,7 @@ export class Triangle implements Figure {
     public c: number,
   ) {
     validateTriangle(a, b, c);
-    // this.a = a;
-    // this.b = b;
-    // this.c = c;
     this.shape = 'triangle';
-    // this.color = color;
   }
 
   getArea: () => number = () => {
@@ -69,9 +65,7 @@ export class Circle implements Figure {
     public radius: number,
   ) {
     validateCircle(radius);
-    // this.radius = radius;
     this.shape = 'circle';
-    // this.color = color;
   }
 
   getArea: () => number = () => {
@@ -96,10 +90,7 @@ export class Rectangle implements Figure {
     public height: number,
   ) {
     validateRectangle(width, height);
-    // this.a = a;
-    // this.b = b;
     this.shape = 'rectangle';
-    // this.color = color;
   }
 
   getArea: () => number = () => {
