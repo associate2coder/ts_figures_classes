@@ -36,11 +36,11 @@ export class Triangle implements Figure {
     public c: number,
   ) {
     validateTriangle(a, b, c);
-    this.a = a;
-    this.b = b;
-    this.c = c;
+    // this.a = a;
+    // this.b = b;
+    // this.c = c;
     this.shape = 'triangle';
-    this.color = color;
+    // this.color = color;
   }
 
   getArea: () => number = () => {
@@ -49,9 +49,9 @@ export class Triangle implements Figure {
     const diffB: number = s - this.b;
     const diffC: number = s - this.c;
 
-    const result = Math.sqrt(s * diffA * diffB * diffC);
+    const area = Math.sqrt(s * diffA * diffB * diffC);
 
-    return Math.round(result * 100) / 100;
+    return roundTo2FloatingPoints(area);
   };
 }
 
@@ -69,9 +69,9 @@ export class Circle implements Figure {
     public radius: number,
   ) {
     validateCircle(radius);
-    this.radius = radius;
+    // this.radius = radius;
     this.shape = 'circle';
-    this.color = color;
+    // this.color = color;
   }
 
   getArea: () => number = () => {
@@ -92,18 +92,18 @@ export class Rectangle implements Figure {
 
   constructor(
     public color: Color,
-    public a: number,
-    public b: number,
+    public width: number,
+    public height: number,
   ) {
-    validateRectangle(a, b);
-    this.a = a;
-    this.b = b;
+    validateRectangle(width, height);
+    // this.a = a;
+    // this.b = b;
     this.shape = 'rectangle';
-    this.color = color;
+    // this.color = color;
   }
 
   getArea: () => number = () => {
-    const area = this.a * this.b;
+    const area = this.width * this.height;
 
     return roundTo2FloatingPoints(area);
   };
